@@ -5,13 +5,10 @@ const user = {
     premium: true,
   };
 
- user.mood = 'happy';
+user.mood = 'happy';
+user.hobby = 'skydiving',
+user.premium = false;
 
-const user2 = {
-    hobby: 'skydiving',
-    premium: false
+for (const key of Object.keys(user)) {
+    console.log(`${key}: ${user[key]}`);
 }
-
-const newUser = {...user, ...user2}
-
-console.log(Object.entries(newUser));

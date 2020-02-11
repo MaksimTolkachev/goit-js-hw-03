@@ -1,10 +1,4 @@
-const countProps = function (obj) {
-    let props = 0;
-    for (let key in obj) {
-      props += 1;
-    }
-    return props
-  }
+const countProps = obj => Object.keys(obj).length;
 
 
 

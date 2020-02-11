@@ -6,12 +6,13 @@ const products = [
   ];
 
   const getAllPropValues = function (arr, prop) {
-    let properties = [];
-    for (let key in arr) {
-      let obj = arr[key];
-      if (obj.hasOwnProperty(prop)) properties === properties.push(obj[prop]);
+    const values = [];
+    for (const obj of arr) {
+      if (obj.hasOwnProperty(prop)){
+        values.push(obj[prop]);
+      }
     }
-    return properties
+    return values
   }
 
   console.log(getAllPropValues(products, 'name'));
